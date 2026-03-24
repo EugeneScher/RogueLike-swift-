@@ -1,0 +1,101 @@
+{
+  "": {
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/master.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Data/SaveService.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/SaveService.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/SaveService.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/SaveService~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/SaveService.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Backpack.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Backpack.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Backpack.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Backpack~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Backpack.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Domain/DifficultyManager.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/DifficultyManager.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/DifficultyManager.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/DifficultyManager~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/DifficultyManager.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Direction.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Direction.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Direction.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Direction~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Direction.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Enemy.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Enemy.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Enemy.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Enemy~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Enemy.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Domain/GameEngine.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameEngine.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameEngine.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameEngine~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameEngine.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Item.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Item.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Item.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Item~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Item.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Level.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Level.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Level.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Level~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Level.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Player.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Player.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Player.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Player~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Player.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Position.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Position.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Position.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Position~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Position.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Statistics.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Statistics.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Statistics.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Statistics~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Statistics.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Stats.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Stats.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Stats.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Stats~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Stats.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Presentation/CursesUI.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/CursesUI.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/CursesUI.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/CursesUI~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/CursesUI.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Presentation/GameUI.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameUI.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameUI.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameUI~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameUI.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/Presentation/Renderer3D.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Renderer3D.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Renderer3D.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Renderer3D~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Renderer3D.swiftdeps"
+  },
+  "/Users/evgenij/RogueLike/Sources/RogueLike/main.swift": {
+    "dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/main.d",
+    "object": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/main.swift.o",
+    "swiftmodule": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/main.swiftdeps"
+  }
+}

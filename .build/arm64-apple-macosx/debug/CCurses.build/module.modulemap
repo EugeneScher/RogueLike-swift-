@@ -1,0 +1,4 @@
+module CCurses {
+    umbrella header "/Users/evgenij/RogueLike/CCurses/include/CCurses.h"
+    export *
+}

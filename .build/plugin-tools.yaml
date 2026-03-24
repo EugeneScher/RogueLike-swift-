@@ -1,0 +1,98 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "CCurses-arm64-apple-macosx15.0-debug.module": ["<CCurses-arm64-apple-macosx15.0-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "RogueLike-arm64-apple-macosx15.0-debug.exe": ["<RogueLike-arm64-apple-macosx15.0-debug.exe>"]
+  "RogueLike-arm64-apple-macosx15.0-debug.module": ["<RogueLike-arm64-apple-macosx15.0-debug.module>"]
+  "main": ["<CCurses-arm64-apple-macosx15.0-debug.module>","<RogueLike-arm64-apple-macosx15.0-debug.exe>","<RogueLike-arm64-apple-macosx15.0-debug.module>"]
+  "test": ["<CCurses-arm64-apple-macosx15.0-debug.module>","<RogueLike-arm64-apple-macosx15.0-debug.exe>","<RogueLike-arm64-apple-macosx15.0-debug.module>"]
+default: "main"
+nodes:
+  "/Users/evgenij/RogueLike/CCurses/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/evgenij/RogueLike/Sources/RogueLike/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike":
+    is-mutated: true
+commands:
+  "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/CCurses.build/ccurses.c.o":
+    tool: clang
+    inputs: ["/Users/evgenij/RogueLike/CCurses/ccurses.c"]
+    outputs: ["/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/CCurses.build/ccurses.c.o"]
+    description: "Compiling CCurses ccurses.c"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/clang","-fobjc-arc","-target","arm64-apple-macosx10.13","-O0","-DSWIFT_PACKAGE=1","-DDEBUG=1","-fblocks","-index-store-path","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/index/store","-fmodules","-fmodule-name=CCurses","-fmodules-cache-path=/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/ModuleCache","-I","/Users/evgenij/RogueLike/CCurses/include","-isysroot","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-fPIC","-g","-MD","-MT","dependencies","-MF","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/CCurses.build/ccurses.c.d","-c","/Users/evgenij/RogueLike/CCurses/ccurses.c","-o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/CCurses.build/ccurses.c.o"]
+    deps: "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/CCurses.build/ccurses.c.d"
+
+  "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike-entitlement.plist"]
+    description: "Write auxiliary file /Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike-entitlement.plist"
+
+  "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/evgenij/RogueLike/Sources/RogueLike/Data/SaveService.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Backpack.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/DifficultyManager.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Direction.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Enemy.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/GameEngine.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Item.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Level.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Player.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Position.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Statistics.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Stats.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Presentation/CursesUI.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Presentation/GameUI.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Presentation/Renderer3D.swift","/Users/evgenij/RogueLike/Sources/RogueLike/main.swift"]
+    outputs: ["/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/sources"]
+    description: "Write auxiliary file /Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/sources"
+
+  "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/CCurses.build/ccurses.c.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Backpack.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/CursesUI.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/DifficultyManager.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Direction.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Enemy.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameEngine.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameUI.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Item.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Level.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Player.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Position.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Renderer3D.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/SaveService.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Statistics.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Stats.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/main.swift.o"]
+    outputs: ["/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.product/Objects.LinkFileList"
+
+  "/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Library/Developer/CommandLineTools/usr/bin/swiftc"]
+    outputs: ["/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt"
+
+  "<CCurses-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/CCurses.build/ccurses.c.o"]
+    outputs: ["<CCurses-arm64-apple-macosx15.0-debug.module>"]
+
+  "<RogueLike-arm64-apple-macosx15.0-debug.exe>":
+    tool: phony
+    inputs: ["<RogueLike-arm64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    outputs: ["<RogueLike-arm64-apple-macosx15.0-debug.exe>"]
+
+  "<RogueLike-arm64-apple-macosx15.0-debug.module>":
+    tool: phony
+    inputs: ["/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/SaveService.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Backpack.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/DifficultyManager.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Direction.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Enemy.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameEngine.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Item.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Level.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Player.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Position.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Statistics.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Stats.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/CursesUI.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameUI.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Renderer3D.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/main.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/Modules/RogueLike.swiftmodule"]
+    outputs: ["<RogueLike-arm64-apple-macosx15.0-debug.module>"]
+
+  "C.RogueLike-arm64-apple-macosx15.0-debug.exe":
+    tool: shell
+    inputs: ["/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/CCurses.build/ccurses.c.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Backpack.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/CursesUI.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/DifficultyManager.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Direction.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Enemy.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameEngine.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameUI.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Item.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Level.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Player.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Position.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Renderer3D.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/SaveService.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Statistics.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Stats.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/main.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.product/Objects.LinkFileList"]
+    outputs: ["/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/RogueLike"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-L","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug","-o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike","-module-name","RogueLike","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_RogueLike_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/usr/lib/swift-5.5/macosx","-target","arm64-apple-macosx10.13","-lncurses","-Xlinker","-add_ast_path","-Xlinker","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/Modules/RogueLike.swiftmodule","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xlinker","-rpath","-Xlinker","/Library/Developer/CommandLineTools/Library/Developer/Frameworks"]
+
+  "C.RogueLike-arm64-apple-macosx15.0-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike-entitlement.plist"]
+    outputs: ["<RogueLike-arm64-apple-macosx15.0-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/RogueLike"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike-entitlement.plist","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike"]
+
+  "C.RogueLike-arm64-apple-macosx15.0-debug.module":
+    tool: shell
+    inputs: ["/Users/evgenij/RogueLike/Sources/RogueLike/Data/SaveService.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Backpack.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/DifficultyManager.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Direction.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Enemy.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/GameEngine.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Item.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Level.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Player.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Position.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Statistics.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Domain/Stats.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Presentation/CursesUI.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Presentation/GameUI.swift","/Users/evgenij/RogueLike/Sources/RogueLike/Presentation/Renderer3D.swift","/Users/evgenij/RogueLike/Sources/RogueLike/main.swift","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/swift-version--1AB21518FC5DEDBE.txt","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/CCurses.build/ccurses.c.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/sources"]
+    outputs: ["/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/SaveService.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Backpack.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/DifficultyManager.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Direction.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Enemy.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameEngine.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Item.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Level.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Player.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Position.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Statistics.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Stats.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/CursesUI.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/GameUI.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/Renderer3D.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/main.swift.o","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/Modules/RogueLike.swiftmodule"]
+    description: "Compiling Swift Module 'RogueLike' (16 sources)"
+    args: ["/Library/Developer/CommandLineTools/usr/bin/swiftc","-module-name","RogueLike","-emit-dependencies","-emit-module","-emit-module-path","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/Modules/RogueLike.swiftmodule","-output-file-map","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/output-file-map.json","-incremental","-c","@/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/RogueLike.build/sources","-I","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-enable-batch-mode","-index-store-path","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j10","-DSWIFT_PACKAGE","-DDEBUG","-Xcc","-fmodule-map-file=/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/CCurses.build/module.modulemap","-Xcc","-I","-Xcc","/Users/evgenij/RogueLike/CCurses/include","-module-cache-path","/Users/evgenij/RogueLike/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","RogueLike_main","-color-diagnostics","-swift-version","5","-F","/Library/Developer/CommandLineTools/Library/Developer/Frameworks","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-fPIC","-Xcc","-g","-package-name","roguelike"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/evgenij/RogueLike/CCurses/","/Users/evgenij/RogueLike/Sources/RogueLike/","/Users/evgenij/RogueLike/Package.swift","/Users/evgenij/RogueLike/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+
